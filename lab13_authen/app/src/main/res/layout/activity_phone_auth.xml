@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/images"
+    tools:context=".PhoneAuthActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Step 1: Phone Number Input -->
+        <LinearLayout
+            android:id="@+id/layoutPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:contentDescription="Application Logo"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xác thực bằng số điện thoại"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhập số điện thoại của bạn để tiếp tục"
+                android:textColor="#D1D5DB"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Nhập số điện thoại (+84...)"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#9AA0B4"
+                android:textSize="15sp"
+                android:background="@color/cardview_light_background"
+                android:drawablePadding="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnSendCode"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Gửi mã xác minh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#2563EB"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+
+        <!-- Step 2: OTP Verification -->
+        <LinearLayout
+            android:id="@+id/layoutOtpInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xác minh OTP"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhập mã 6 chữ số được gửi đến số điện thoại của bạn"
+                android:textColor="#D1D5DB"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/editTextCode"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Nhập mã OTP (6 chữ số)"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#9AA0B4"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/cardview_light_background"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnVerify"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Xác minh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#16A34A"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnResendCode"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Gửi lại mã"
+                android:textSize="13sp"
+                android:textColor="#2563EB"
+                android:background="?attr/selectableItemBackground" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
