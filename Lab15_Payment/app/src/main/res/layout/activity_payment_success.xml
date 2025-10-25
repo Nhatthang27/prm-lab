@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/success_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Success Icon -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iconCard"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="12dp"
+            android:backgroundTint="@color/success"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="✓"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Success Title -->
+        <TextView
+            android:id="@+id/successTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanh toán thành công!"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/success"
+            android:layout_marginBottom="12dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/successSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giao dịch đã được xử lý thành công"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="40dp"
+            android:gravity="center" />
+
+        <!-- Payment Details Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/background_card"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chi tiết giao dịch"
+                    style="@style/CardTitle"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Order ID -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order ID:"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvOrderInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ORD123456789"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <!-- Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Số tiền:"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nguyen Van A"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/success" />
+                </LinearLayout>
+
+                <!-- Phone -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Số điện thoại:"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0123456789"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <!-- Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Thẻ thanh toán:"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9704 **** **** 0018"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackHome"
+            style="@style/PaymentButton"
+            android:layout_width="match_parent"
+            android:text="Về trang chủ"
+            app:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp"
+            app:elevation="6dp"
+            android:layout_marginTop="8dp" />
+
+
+    </LinearLayout>
+</ScrollView>
